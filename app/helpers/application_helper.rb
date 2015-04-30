@@ -12,7 +12,7 @@ module ApplicationHelper
   def page_header_subtitle
     anchor_text = %{
       <span class="glyphicon glyphicon-map-marker"></span>Dillibazaar
-    }.html_safe
+      }.html_safe
 
     %{
       Instagram photos taken within #{pluralize InstagramItem::MAX_DISTANCE_IN_METERS.to_i, 'meter'} of #{link_to anchor_text, '#', title: 'view map', class: 'map-link', 'data-toggle': 'modal', 'data-target': '#map-modal'}. Created by <a href="http://twitter.com/ReneCNielsen" target="_blank">@ReneCNielsen</a>.

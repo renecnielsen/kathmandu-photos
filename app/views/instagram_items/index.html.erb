@@ -3,12 +3,14 @@ content_for :meta_tags, meta_tags_for_index
 %>
 
 <% cache index_cache_key, expires_in: 1.minute do %>
-  <div class="page-header">
-    <h1>
-      <%= name_of_site %><br>
-      <small><%= page_header_subtitle %></small>
-    </h1>
-  </div>
+<div class="page-header">
+  <h1>
+    <%= name_of_site %><br>
+  </h1>
+  <h3>
+    <%= page_header_subtitle %>
+  </h3>
+</div>
 
   <div class="instagram-items">
     <%= render partial: '/instagram_items/thumbnail', collection: @items, as: :item %>
