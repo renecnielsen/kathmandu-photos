@@ -11,7 +11,7 @@ module ApplicationHelper
 
   def page_header_subtitle
     anchor_text = %{
-      <span class="glyphicon glyphicon-map-marker"></span>#{InstagramItem::LATITUDE}, #{InstagramItem::LONGITUDE}
+      <span class="glyphicon glyphicon-map-marker"></span>Kathmandu
     }.html_safe
 
     %{
