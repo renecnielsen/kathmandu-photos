@@ -66,7 +66,7 @@ module ApplicationHelper
   end
 
   def google_analytics
-    return unless Rails.env.production? && ENV['GOOGLE_ANALYTICS_TRACKING_ID']
+    return unless Rails.env.production? && ENV['UA-62518204-1']
 
     %{
       <script>
@@ -75,9 +75,8 @@ module ApplicationHelper
         m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
         })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-        ga('create', '#{ENV['GOOGLE_ANALYTICS_TRACKING_ID']}', 'auto');
+        ga('create', '#{ENV['UA-62518204-1']}', 'auto');
         ga('send', 'pageview');
-
       </script>
     }.html_safe
   end
